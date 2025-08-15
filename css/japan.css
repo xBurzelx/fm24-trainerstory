@@ -1,0 +1,41 @@
+body.japan {
+  background-color: #fffaf0;
+  color: #b30000;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.japan-header {
+  background-color: #b30000;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+}
+
+.japan-logo {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.japan-nav {
+  background-color: #e60000;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.japan-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.japan-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.japan-nav a:hover {
+  color: #ffcccc;
+}
