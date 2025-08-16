@@ -1,0 +1,41 @@
+body.usa {
+  background-color: #001f3f; /* Dunkelblau */
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.usa-header {
+  background-color: #ff4136; /* kräftiges Rot */
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+}
+
+.usa-logo {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.usa-nav {
+  background-color: #0074D9; /* Blau für Navigation */
+  padding: 10px 0;
+  text-align: center;
+}
+
+.usa-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.usa-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.usa-nav a:hover {
+  color: #ffcccb;
+}
