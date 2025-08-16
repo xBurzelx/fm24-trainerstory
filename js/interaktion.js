@@ -95,3 +95,11 @@ document.querySelectorAll(".filter-bar button").forEach(btn => {
     });
   });
 });
+
+document.querySelectorAll(".filter-bar button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-bar button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    // Filterlogik hier
+  });
+});

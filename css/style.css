@@ -256,3 +256,14 @@ body {
 [data-filter="afrika"] { background-color: #10b981; }   /* Grün */
 [data-filter="amerika"]{ background-color: #ef4444; }   /* Rot */
 [data-filter="ozeanien"]{ background-color: #8b5cf6; }  /* Violett */
+
+/* Hover-Effekt */
+.filter-bar button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.filter-bar button.active {
+  outline: 3px solid white;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
