@@ -228,3 +228,31 @@ body {
   50% { transform: translateY(-10px) rotate(var(--angle, 0deg)); }
   100% { transform: translateY(0) rotate(var(--angle, 0deg)); }
 }
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.filter-bar button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-bar button:hover {
+  background-color: #444;
+}
+
+[data-filter="europa"] { background-color: #3b82f6; }   /* Blau */
+[data-filter="asien"]  { background-color: #f59e0b; }   /* Orange */
+[data-filter="afrika"] { background-color: #10b981; }   /* Grün */
+[data-filter="amerika"]{ background-color: #ef4444; }   /* Rot */
+[data-filter="ozeanien"]{ background-color: #8b5cf6; }  /* Violett */

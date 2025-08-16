@@ -81,3 +81,17 @@ document.querySelectorAll(".kapitel-toggle").forEach(button => {
     content.classList.toggle("open");
   });
 });
+
+// Filterfunktion
+document.querySelectorAll(".filter-bar button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const filter = btn.getAttribute("data-filter");
+    document.querySelectorAll(".flag-marker").forEach(marker => {
+      if (filter === "all" || marker.classList.contains(filter)) {
+        marker.style.display = "block";
+      } else {
+        marker.style.display = "none";
+      }
+    });
+  });
+});
