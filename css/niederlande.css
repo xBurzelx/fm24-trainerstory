@@ -1,0 +1,41 @@
+body.niederlande {
+  background-color: #e3f2fd; /* sanftes Blau */
+  color: #0d47a1;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.niederlande-header {
+  background-color: #1976d2; /* kräftiges Blau */
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+}
+
+.niederlande-logo {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.niederlande-nav {
+  background-color: #0d47a1;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.niederlande-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.niederlande-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.niederlande-nav a:hover {
+  color: #bbdefb;
+}

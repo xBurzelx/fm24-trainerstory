@@ -1,0 +1,151 @@
+/* === Grundlayout für Japan === */
+body.japan {
+  background-color: #fffaf0;
+  color: #b30000;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* === Japan Header === */
+.japan-header {
+  background-color: #b30000;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+}
+
+.japan-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.japan-header .subtitle {
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #ffe0b2;
+}
+
+.japan-logo {
+  width: 80px;
+  margin-top: 10px;
+}
+
+/* === Navigation === */
+.japan-nav {
+  width: auto;
+  background-color: #e60000;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.japan-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.japan-nav img {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+.japan-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.japan-nav a:hover {
+  background-color: #ee8686;
+  color: #685151;
+}
+
+/* === Japanische Grafiken === */
+.japan-graphics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.japan-graphics img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+/* === Scroll-to-Top Button === */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#scrollToTopBtn:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* === Farbvarianten über data-theme === */
+body[data-theme="gruen"] #scrollToTopBtn {
+  background-color: #2ecc71;
+}
+
+body[data-theme="rot"] #scrollToTopBtn {
+  background-color: #e74c3c;
+}
+
+body[data-theme="blau"] #scrollToTopBtn {
+  background-color: #3498db;
+}
+
+/* === Theme-Switcher Buttons === */
+.theme-switcher {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.theme-switcher button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+}
+
+.theme-switcher .gruen { background-color: #2ecc71; }
+.theme-switcher .rot   { background-color: #e74c3c; }
+.theme-switcher .blau  { background-color: #3498db; }
