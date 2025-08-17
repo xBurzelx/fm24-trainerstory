@@ -12,6 +12,16 @@
   scroll-snap-type: x mandatory;
 }
 
+.timeline-title {
+  font-size: 2em;
+  text-align: center;
+  color: #00BFFF;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
 .timeline-item {
   flex: 0 0 auto;
   width: 220px;
@@ -50,4 +60,95 @@
 .timeline-content p {
   font-size: 0.95em;
   color: #ccc;
+}
+
+.timeline-item.highlight {
+  border: 2px solid gold;
+  background: #1a1a1a;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.timeline-content img[class^="flag-"] {
+  width: 64px;
+  max-height: 40px;
+  object-fit: contain;
+  margin: 8px auto;
+  display: block;
+}
+
+img[class^="flag-"] {
+  width: 64px;
+  max-height: 40px;
+  object-fit: contain;
+  margin: 8px auto;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+img[class^="flag-"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.flag-zeland {
+  border: 4px solid transparent;
+  border-radius: 6px;
+  background-image: linear-gradient(#00247D, #ffffff, #CC142B); /* Dunkelblau, Weiß, Rot */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 2px;
+}
+
+.flag-elfenbeinküste {
+  border: 4px solid transparent;
+  border-radius: 6px;
+  background-image: linear-gradient(#F77F00, #ffffff, #009E60); /* Orange, Weiß, Grün */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 2px;
+}
+
+.flag-usa {
+  border: 4px solid transparent;
+  border-radius: 6px;
+  background-image: linear-gradient(#3C3B6E, #ffffff, #B22234); /* Blau, Weiß, Rot */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 2px;
+}
+
+.flag-japan {
+  border: 4px solid transparent;
+  border-radius: 6px;
+  background-image: linear-gradient(#ffffff, #BC002D, #ffffff); /* Weiß, Rot, Weiß */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 2px;
+}
+
+.flag-argentinien {
+  border: 4px solid transparent;
+  border-radius: 6px;
+  background-image: linear-gradient(#74ACDF, #ffffff, #74ACDF); /* Hellblau, Weiß, Hellblau */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 2px;
+}
+
+.flag-niederland {
+  border: 4px solid transparent;
+  border-radius: 6px;
+  background-image: linear-gradient(#21468B, #ffffff, #AE1C28); /* Blau, Weiß, Rot */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 2px;
+}
+
+.flag-zeland,
+.flag-elfenbeinküste,
+.flag-usa,
+.flag-japan,
+.flag-argentinien,
+.flag-niederland {
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
 }
