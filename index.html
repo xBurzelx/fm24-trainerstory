@@ -1,128 +1,180 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Burzel – Am Rande der Unsterblichkeit</title>
+
+  <!-- 🔖 CSS - Style -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- 🔖 Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/favicon.png">
+  <meta name="theme-color" content="#000000">
 </head>
-<body>
-  <div class="header">
-    <canvas id="particleCanvas"></canvas>
-    <div class="header-content chaotic">
-      <h1>Burzel<br>Am Rande der Unsterblichkeit</h1>
-      <div class="header-banner">Willkommen in Burzels Universum</div>
 
-      <img src="img/flaggs/usa.png" class="flag chaos flag-usa" alt="USA">
-      <img src="img/logos/chicago-fire.png" class="flag chaos flag-chicago" alt="Chicago Fire">
-      <img src="img/flaggs/japan.png" class="flag chaos flag-japan" alt="Japan">
-      <img src="img/flaggs/niederlande.png" class="flag chaos flag-nl" alt="Niederlande">
+  <body>
+    <div class="header">
+      <canvas id="particleCanvas"></canvas>
+      <div class="header-content chaotic">
+        <h1>Burzel<br>Am Rande der Unsterblichkeit</h1>
+        <div class="header-banner">Willkommen in Burzels Universum</div>
+
+        <img src="img/flaggs/usa.png" class="flag chaos flag-usa" alt="USA">
+        <img src="img/logos/chicago-fire.png" class="flag chaos flag-chicago" alt="Chicago Fire">
+        <img src="img/flaggs/japan.png" class="flag chaos flag-japan" alt="Japan">
+        <img src="img/flaggs/niederlande.png" class="flag chaos flag-nl" alt="Niederlande">
+      </div>
     </div>
-  </div>
 
-  <div class="filter-bar">
-    <button data-filter="all">Alle</button>
-    <button data-filter="europa">🏰 Europa</button>
-    <button data-filter="asien">🏯 Asien</button>
-    <button data-filter="afrika">🕌 Afrika</button>
-    <button data-filter="amerika">🏟️ Amerika</button>
-    <button data-filter="ozeanien">🏝️ Ozeanien</button>
-  </div>
+    <div class="filter-bar">
+      <button data-filter="all">Alle</button>
+      <button data-filter="europa">🏰 Europa</button>
+      <button data-filter="asien">🏯 Asien</button>
+      <button data-filter="afrika">🕌 Afrika</button>
+      <button data-filter="amerika">🏟️ Amerika</button>
+      <button data-filter="ozeanien">🏝️ Ozeanien</button>
+    </div>
 
-  <div class="map-container">
-    <img src="img/world.png" alt="Weltkarte" id="weltkarte">
+    <div class="map-container">
+      <img src="img/world.png" alt="Weltkarte" id="weltkarte">
 
-    <!-- Dunedin City Royals -->
-    <a href="kapitel/neuseeland.html" class="flag-marker ozeanien" style="top: 89%; left: 92%;">
-      <img src="img/flaggs/neuseeland.png" alt="Neuseeland" class="flag">
-      <div class="tooltip nz"> 
-        <div class="tooltip nz">  
+      <!-- Dunedin City Royals -->
+      <a href="kapitel/neuseeland.html" class="flag-marker ozeanien" style="top: 89%; left: 92%;">
+        <img src="img/flaggs/neuseeland.png" alt="Neuseeland" class="flag">
+        <div class="tooltip nz"> 
+          <div class="tooltip nz">  
+            <img src="img/logos/dunedin-city-royals.png" alt="Dunedin City Royals" class="logo">
+            <div class="club-name">Dunedin City Royals</div>
+            <img src="img/flaggs/neuseeland.png" alt="Neuseeland Flagge" class="flag-icon">
+
+            <!-- Mini-Vitrine -->
+            <div class="vitrine">
+              <div class="trophy" title="Nation League Champion">
+                <img src="img/trophies/Neuseelands Nation League Championship - Neuseelands Southern League.png" alt="Nation League">
+                <span>2023</span>
+              </div>
+              <div class="trophy" title="Nation League Champion">
+                <img src="img/trophies/Neuseelands Nation League Championship - Neuseelands Southern League.png" alt="Nation League">
+                <span>2024</span>
+              </div>
+              <div class="trophy" title="Neuseelands Southern League">
+                <img src="img/trophies/Neuseelands Nation League Championship - Neuseelands Southern League.png" alt="Nation League">
+                <span>2023</span>
+              </div>
+              <div class="trophy" title="NNeuseelands Southern League">
+                <img src="img/trophies/Neuseelands Nation League Championship - Neuseelands Southern League.png" alt="Nation League">
+                <span>2024</span>
+              </div>
+              <div class="trophy" title="Chatham Cup Sieger">
+                <img src="img/trophies/Neuseelands Chatham Cup.png" alt="Chatham Cup">
+                <span>2023</span>
+              </div>
+              <div class="trophy" title="Chatham Cup Sieger">
+                <img src="img/trophies/Neuseelands Chatham Cup.png" alt="Chatham Cup">
+                <span>2024</span>
+              </div>
+              <div class="trophy" title="OFC Champions League Sieger">
+                <img src="img/trophies/OFC Champions League.png" alt="OFC CL">
+                <span>2024</span>
+              </div>
+            </div>
+          </div>
           <img src="img/logos/dunedin-city-royals.png" alt="Dunedin City Royals" class="logo">
           <div class="club-name">Dunedin City Royals</div>
           <img src="img/flaggs/neuseeland.png" alt="Neuseeland Flagge" class="flag-icon">
-
-          <!-- Mini-Vitrine -->
-          <div class="vitrine">
-            <div class="trophy" title="Nation League Champion">
-              <img src="img/trophies/Neuseelands Nation League Championship - Neuseelands Southern League.png" alt="Nation League">
-              <span>2023</span>
-            </div>
-            <div class="trophy" title="Nation League Champion">
-              <img src="img/trophies/Neuseelands Nation League Championship - Neuseelands Southern League.png" alt="Nation League">
-              <span>2024</span>
-            </div>
-            <div class="trophy" title="Neuseelands Southern League">
-              <img src="img/trophies/Neuseelands Nation League Championship - Neuseelands Southern League.png" alt="Nation League">
-              <span>2023</span>
-            </div>
-            <div class="trophy" title="NNeuseelands Southern League">
-              <img src="img/trophies/Neuseelands Nation League Championship - Neuseelands Southern League.png" alt="Nation League">
-              <span>2024</span>
-            </div>
-            <div class="trophy" title="Chatham Cup Sieger">
-              <img src="img/trophies/Neuseelands Chatham Cup.png" alt="Chatham Cup">
-              <span>2023</span>
-            </div>
-            <div class="trophy" title="Chatham Cup Sieger">
-              <img src="img/trophies/Neuseelands Chatham Cup.png" alt="Chatham Cup">
-              <span>2024</span>
-            </div>
-            <div class="trophy" title="OFC Champions League Sieger">
-              <img src="img/trophies/OFC Champions League.png" alt="OFC CL">
-              <span>2024</span>
-            </div>
-          </div>
         </div>
-        <img src="img/logos/dunedin-city-royals.png" alt="Dunedin City Royals" class="logo">
-        <div class="club-name">Dunedin City Royals</div>
-        <img src="img/flaggs/neuseeland.png" alt="Neuseeland Flagge" class="flag-icon">
-      </div>
-    </a>
+      </a>
 
-    <!-- Nagoya Grampus -->
-    <a href="kapitel/japan.html" class="flag-marker asien" style="top: 45.6%; left: 83.3%;">
-      <img src="img/flaggs/japan.png" alt="Japan" class="flag">
-      <div class="tooltip jp">
-        <img src="img/logos/nagoya-grampus.png" alt="Nagoya Grampus" class="logo">
-        <p>Nagoya Grampus</p>
-      </div>
-    </a>
+      <!-- Nagoya Grampus -->
+      <a href="kapitel/japan.html" class="flag-marker asien" style="top: 45.6%; left: 83.3%;">
+        <img src="img/flaggs/japan.png" alt="Japan" class="flag">
+        <div class="tooltip jp">
+          <img src="img/logos/nagoya-grampus.png" alt="Nagoya Grampus" class="logo">
+          <p>Nagoya Grampus</p>
+        </div>
+      </a>
 
-    <!-- ASEC Mimosas -->
-    <a href="kapitel/elfenbeinküste.html" class="flag-marker afrika" style="top: 59.5%; left: 47.5%;">
-      <img src="img/flaggs/elfenbeinküste.png" alt="Elfenbeinküste" class="flag">
-      <div class="tooltip ci">
-        <img src="img/logos/asec-mimosas.png" alt="ASEC Mimosas" class="logo">
-        <p>ASEC Mimosas</p>
-      </div>
-    </a>
+      <!-- ASEC Mimosas -->
+      <a href="kapitel/elfenbeinküste.html" class="flag-marker afrika" style="top: 59.5%; left: 47.5%;">
+        <img src="img/flaggs/elfenbeinküste.png" alt="Elfenbeinküste" class="flag">
+        <div class="tooltip ci">
+          <img src="img/logos/asec-mimosas.png" alt="ASEC Mimosas" class="logo">
+          <p>ASEC Mimosas</p>
+        </div>
+      </a>
 
-    <!-- Chicago Fire -->
-    <a href="kapitel/usa.html" class="flag-marker amerika" style="top: 40%; left: 20%;">
-      <img src="img/flaggs/usa.png" alt="USA" class="flag">
-      <div class="tooltip us">
-        <img src="img/logos/chicago-fire.png" alt="Chicago Fire" class="logo">
-        <p>Chicago Fire</p>
-      </div>
-    </a>
+      <!-- Chicago Fire -->
+      <a href="kapitel/usa.html" class="flag-marker amerika" style="top: 40%; left: 20%;">
+        <img src="img/flaggs/usa.png" alt="USA" class="flag">
+        <div class="tooltip us">
+          <img src="img/logos/chicago-fire.png" alt="Chicago Fire" class="logo">
+          <p>Chicago Fire</p>
+        </div>
+      </a>
 
-    <!-- Rosario Central -->
-    <a href="kapitel/argentinien.html" class="flag-marker südamerika" style="top: 82%; left: 31%;">
-      <img src="img/flaggs/argentinien.png" alt="Argentinien" class="flag">
-      <div class="tooltip ar">
-        <img src="img/logos/rosario-central.png" alt="Rosario Central" class="logo">
-        <p>Rosario Central</p>
-      </div>
-    </a>
+      <!-- Rosario Central -->
+      <a href="kapitel/argentinien.html" class="flag-marker südamerika" style="top: 82%; left: 31%;">
+        <img src="img/flaggs/argentinien.png" alt="Argentinien" class="flag">
+        <div class="tooltip ar">
+          <img src="img/logos/rosario-central.png" alt="Rosario Central" class="logo">
+          <p>Rosario Central</p>
+        </div>
+      </a>
 
-    <!-- Ajax Amsterdam -->
-    <a href="kapitel/niederlande.html" class="flag-marker europa" style="top: 37%; left: 47%;">
-      <img src="img/flaggs/niederlande.png" alt="Niederlande" class="flag">
-      <div class="tooltip nl">
-        <img src="img/logos/ajax-amsterdam.png" alt="Ajax Amsterdam" class="logo">
-        <p>Ajax Amsterdam</p>
-      </div>
-    </a>
+      <!-- Ajax Amsterdam -->
+      <a href="kapitel/niederlande.html" class="flag-marker europa" style="top: 37%; left: 47%;">
+        <img src="img/flaggs/niederlande.png" alt="Niederlande" class="flag">
+        <div class="tooltip nl">
+          <img src="img/logos/ajax-amsterdam.png" alt="Ajax Amsterdam" class="logo">
+          <p>Ajax Amsterdam</p>
+        </div>
+      </a>
+    </div>
 
-<script src="js/interaktion.js"></script>
-</body>
+      <section class="timeline">
+        <h2 class="timeline-title">📘 Burzels Reise & Erfolge</h2>
+
+        <div class="timeline-item">
+          <span class="timeline-date">Kapitel 1</span>
+          <h3>Der Ruf des Nebelwalds</h3>
+          <p>Burzel verlässt sein Heimatdorf, getrieben von einer rätselhaften Vision.</p>
+        </div>
+
+        <div class="timeline-item highlight">
+          <span class="timeline-date">🏆 Pokal: Kristallkelch</span>
+          <h3>Erster großer Sieg</h3>
+          <p>Burzel gewinnt den Kristallkelch im Turnier der Nebelkrieger.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">Kapitel 4</span>
+          <h3>Die Begegnung mit dem Schatten</h3>
+          <p>Ein mysteriöser Fremder enthüllt die Wahrheit über Burzels Herkunft.</p>
+        </div>
+
+        <div class="timeline-item highlight">
+          <span class="timeline-date">🧙‍♂️ Spieler: Eldan der Weise</span>
+          <h3>Neuer Verbündeter</h3>
+          <p>Burzel trifft Eldan, einen legendären Magier, der ihn fortan begleitet.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">Kapitel 10</span>
+          <h3>Am Rande der Unsterblichkeit</h3>
+          <p>Im finalen Kampf offenbart sich Burzels wahre Bestimmung.</p>
+        </div>
+
+        <div class="timeline-item highlight">
+          <span class="timeline-date">🏆 Pokal: Flammenkrone</span>
+          <h3>Der letzte Triumph</h3>
+          <p>Burzel erringt die Flammenkrone – Symbol der Unsterblichkeit.</p>
+        </div>
+      </section>
+
+  <script src="js/interaktion.js"></script>
+  </body>
 </html>

@@ -1,0 +1,53 @@
+.karriere-timeline {
+  padding: 40px;
+  background: #111;
+  color: white;
+}
+
+.timeline {
+  display: flex;
+  overflow-x: auto;
+  gap: 40px;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.timeline-item {
+  flex: 0 0 auto;
+  width: 220px;
+  background: #222;
+  border-radius: 12px;
+  padding: 16px;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: scale(1.05);
+  background: #333;
+}
+
+.timeline-content {
+  text-align: center;
+}
+
+.timeline-content .jahr {
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+.timeline-content .logo {
+  width: 48px;
+  margin: 8px 0;
+  filter: drop-shadow(0 0 4px gold);
+}
+
+.timeline-content h3 {
+  margin: 8px 0 4px;
+  font-size: 1.1em;
+}
+
+.timeline-content p {
+  font-size: 0.95em;
+  color: #ccc;
+}
