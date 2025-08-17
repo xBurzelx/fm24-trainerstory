@@ -220,7 +220,3 @@ body[data-theme="blau"]  #scrollToTopBtn { background-color: #3498db; }
   border-radius: 5px;
   color: white;
 }
-
-.theme-switcher .gruen { background-color: #2ecc71; }
-.theme-switcher .rot   { background-color: #e74c3c; }
-.theme-switcher .blau  { background-color: #3498db; }
