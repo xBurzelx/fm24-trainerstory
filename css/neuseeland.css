@@ -220,3 +220,11 @@ body[data-theme="blau"]  #scrollToTopBtn { background-color: #3498db; }
   border-radius: 5px;
   color: white;
 }
+
+.story-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00f0ff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
