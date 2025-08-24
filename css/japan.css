@@ -1,13 +1,137 @@
-/* === Grundlayout für Japan === */
-body.japan {
-  background-color: #fffaf0;
-  color: #b30000;
-  font-family: 'Noto Sans JP', sans-serif;
+/* ===============================
+   Farbvariablen für konsistentes Design
+================================== */
+:root {
+  --rot: #b30000;
+  --rot-hell: #e60000;
+  --rot-pastell: #ffe4e1;
+  --hintergrund: #fffaf0;
+  --text: #4a1c1c;
+  --zitat-text: #5c0000;
+  --akzent-gold: #ffd700;
 }
 
-/* === Japan Header === */
+/* ===============================
+   Grundlayout & Schrift
+================================== */
+body.japan {
+  background: linear-gradient(to bottom, var(--hintergrund), #fce4ec);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.8;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===============================
+   Kapitelcontainer
+================================== */
+.kapitel.japan {
+  background-color: #ffffff;
+  border-left: 6px solid var(--rot);
+  box-shadow: 0 4px 12px rgba(179, 0, 0, 0.1);
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   Kapitelüberschriften
+================================== */
+.kapitel.japan h2 {
+  font-size: 2.2em;
+  color: var(--rot);
+  border-bottom: 2px solid var(--rot-hell);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.kapitel.japan h3 {
+  font-size: 1.4em;
+  color: var(--rot-hell);
+  border-bottom: 1px solid var(--rot-pastell);
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+/* ===============================
+   Zitate & Epilog
+================================== */
+.burzel-quote.japan,
+.epilog-box {
+  background-color: #fff0f0;
+  border-left: 4px solid var(--rot-hell);
+  padding: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  color: var(--zitat-text);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(230, 0, 0, 0.1);
+}
+
+/* ===============================
+   Tabellen
+================================== */
+.kapitel.japan table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.kapitel.japan th {
+  background-color: var(--rot-pastell);
+  color: var(--rot);
+  padding: 12px;
+}
+
+.kapitel.japan td {
+  padding: 10px;
+  border-bottom: 1px solid #f5c6c6;
+}
+
+.kapitel.japan tr:nth-child(even) {
+  background-color: #fff5f5;
+}
+
+.kapitel.japan tr:hover {
+  background-color: var(--rot-pastell);
+}
+
+/* ===============================
+   Charakterkarten
+================================== */
+.charakter-card {
+  background: linear-gradient(to bottom, #fff, var(--hintergrund));
+  border: 2px solid var(--rot);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(179, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.charakter-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(179, 0, 0, 0.2);
+}
+
+/* ===============================
+   Japan Header
+================================== */
 .japan-header {
-  background-color: #b30000;
+  background: linear-gradient(to right, var(--rot), var(--rot-hell));
   color: #ffffff;
   text-align: center;
   padding: 30px;
@@ -30,10 +154,11 @@ body.japan {
   margin-top: 10px;
 }
 
-/* === Navigation === */
+/* ===============================
+   Navigation
+================================== */
 .japan-nav {
-  width: auto;
-  background-color: #e60000;
+  background-color: var(--rot-hell);
   padding: 10px 0;
   text-align: center;
 }
@@ -71,149 +196,77 @@ body.japan {
   color: #685151;
 }
 
-/* === Japanische Grafiken === */
-.japan-graphics {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+.japan-nav a.active {
+  background-color: var(--rot-pastell);
+  color: var(--text);
+  border: 2px solid var(--akzent-gold);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
 }
 
-.japan-graphics img {
-  width: 80px;
-  height: 80px;
-  border-radius: 8px;
-}
-
-/* === Scroll-to-Top Button === */
+/* ===============================
+   Scroll-to-Top Button
+================================== */
 #scrollToTopBtn {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  font-size: 2rem;
-  background-color: #333;
-  color: white;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--rot);
+  color: #fff;
+  border: 2px solid var(--akzent-gold);
   padding: 10px 15px;
-  border-radius: 50%;
-  border: none;
+  border-radius: 50px;
+  font-family: 'Orbitron', sans-serif;
   cursor: pointer;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.3s ease, background-color 0.3s ease;
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-#scrollToTopBtn.show {
-  opacity: 1;
-  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #scrollToTopBtn:hover {
+  background-color: var(--rot-hell);
   transform: scale(1.2) rotate(10deg);
 }
 
-/* === Farbvarianten über data-theme === */
-body[data-theme="gruen"] #scrollToTopBtn {
-  background-color: #2ecc71;
+.kapitel-block {
+  margin-bottom: 30px;
 }
 
-body[data-theme="rot"] #scrollToTopBtn {
-  background-color: #e74c3c;
-}
-
-body[data-theme="blau"] #scrollToTopBtn {
-  background-color: #3498db;
-}
-
-/* === Kapitel Japan – Stil für Kapitel 2 === */
-.kapitel.japan {
-  background-color: #fffaf0;
-  color: #b30000;
-  font-family: 'Noto Sans JP', sans-serif;
-  padding: 40px;
-  max-width: 800px;
-  margin: auto;
-  border-left: 5px solid #b30000;
-  box-shadow: 0 0 10px rgba(179, 0, 0, 0.1);
-}
-
-.kapitel.japan h2 {
-  color: #b30000;
-  font-size: 2.2em;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #e60000;
-  padding-bottom: 10px;
-}
-
-.kapitel.japan h3 {
-  font-size: 1.4em;
-  color: #e60000;
-  margin-top: 30px;
-  border-bottom: 1px solid #f5c6c6;
-  padding-bottom: 5px;
-}
-
-.kapitel.japan ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.kapitel.japan ul li {
-  margin: 8px 0;
-  padding-left: 20px;
-  position: relative;
-}
-
-.kapitel.japan ul li::before {
-  content: "🎌";
-  position: absolute;
-  left: 0;
-  color: #b30000;
-}
-
-.kapitel.japan em {
-  display: block;
-  margin: 20px 0;
-  color: #a94442;
-  font-style: italic;
-}
-
-.kapitel.japan strong {
-  color: #800000;
+.kapitel-toggle {
+  background: linear-gradient(to right, #e60000, #ff6f61);
+  color: #fff;
+  font-size: 1.1em;
   font-weight: bold;
-}
-
-.burzel-quote.japan {
-  font-size: 1.3em;
-  font-style: italic;
-  margin: 20px 0;
-  padding-left: 20px;
-  border-left: 4px solid #e60000;
-  color: #5c0000;
-  background-color: #fff0f0;
-  padding: 10px 15px;
-  border-radius: 6px;
-}
-
-/* Tabelle für japanische Kapitel */
-.kapitel.japan table {
+  padding: 12px 20px;
+  border: none;
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  font-size: 1em;
-}
-
-.kapitel.japan th,
-.kapitel.japan td {
-  border: 1px solid #e6bcbc;
-  padding: 10px;
   text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.kapitel.japan th {
-  background-color: #ffe4e1;
-  color: #b30000;
+.kapitel-toggle:hover {
+  background-color: #d32f2f;
+}
+
+.kapitel-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: #fffaf0;
+  border-radius: 0 0 8px 8px;
+}
+
+.kapitel-content.open {
+  max-height: 2000px; /* groß genug für Inhalt */
+  padding: 20px 0;
+}
+
+.toggle-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.toggle-content.open {
+  max-height: 500px; /* oder mehr, je nach Inhalt */
 }
