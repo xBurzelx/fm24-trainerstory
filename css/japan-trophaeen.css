@@ -1,0 +1,255 @@
+/* ===============================
+   Farbvariablen für konsistentes Design
+================================== */
+:root {
+  --rot: #b30000;
+  --rot-hell: #e60000;
+  --rot-pastell: #ffe4e1;
+  --hintergrund: #fffaf0;
+  --text: #4a1c1c;
+  --zitat-text: #5c0000;
+  --akzent-gold: #ffd700;
+}
+
+/* ===============================
+   Grundlayout & Schrift
+================================== */
+body.japan {
+  background: linear-gradient(to bottom, var(--hintergrund), #fce4ec);
+  background-image: url('../img/patterns/sakura.svg');
+  background-repeat: repeat;
+  background-size: 300px;
+  color: var(--rot-pastell);
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.8;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-family: 'Shippori Mincho', serif;
+}
+
+/* ===============================
+   📂 Dropdown-Menü
+================================== */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--rot-hell);
+  padding: 0;
+  margin-top: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border: 1px solid var(--zitat-text);
+  display: none;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--rot-pastell);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =============================
+🏆 Trophäen-Sektion
+================================ */
+.japan-trophaeen {
+  background-color: var(--rot-hell);
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  color: var(--text);
+}
+
+.japan-trophaeen h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: var(--akzent-gold);
+  border-bottom: 2px solid var(--rot);
+  padding-bottom: 10px;
+}
+
+.trophy-category {
+  color: var(--akzent-gold);
+  font-size: 1.4em;
+  margin-top: 40px;
+  text-align: center;
+  border-bottom: 2px solid var(--akzent-gold);
+  padding-bottom: 10px;
+}
+
+/* =============================
+🏅 Trophäenliste
+================================== */
+.japan-trophaeen ul {
+  list-style-type: "🏅 ";
+  padding-left: 1.2em;
+  margin-bottom: 30px;
+}
+
+.japan-trophaeen ul li {
+  margin-bottom: 8px;
+}
+
+/* 📖 Zitat am Ende */
+.neuseeland-trophaeen .prolog-text {
+  background-color: var(--rot);
+  color: var(--rot-pastell);
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* 🖼️ Trophäenvitrine */
+.vitrine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: var(--rot);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* 🏆 Einzelne Trophäe */
+.trophy {
+  width: 120px;
+  text-align: center;
+  background-color: var(--rot-hell);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px var(--rot-pastell);
+  transition: transform 0.3s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.trophy:nth-child(1) { animation-delay: 0.1s; }
+.trophy:nth-child(2) { animation-delay: 0.2s; }
+.trophy:nth-child(3) { animation-delay: 0.3s; }
+.trophy:nth-child(4) { animation-delay: 0.4s; }
+.trophy:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trophy:hover {
+  transform: scale(1.05);
+}
+
+/* 🖼️ Trophäenbild */
+.trophy img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* 📅 Jahr */
+.trophy span {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* 💬 Tooltip */
+.trophy::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #ffcc00;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  font-size: 0.9em;
+  z-index: 10;
+}
+
+.trophy:hover::after {
+  opacity: 1;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .vitrine {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .trophy {
+    width: 80%;
+  }
+
+/* ===============================
+   footer
+================================== */
+.footer-japan {
+  background-color: var(--rot); 
+  color: var(--rot-pastell);    
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  font-style: italic;
+  position: relative;
+  border-top: 2px solid var(--rot-hell);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#scrollToTopBtn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: var(--rot-hell);
+  color: #fff;
+  border: 2px solid var(--akzent-gold);
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--rot);
+  transform: scale(1.2) rotate(10deg);
+}

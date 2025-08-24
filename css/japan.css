@@ -16,12 +16,19 @@
 ================================== */
 body.japan {
   background: linear-gradient(to bottom, var(--hintergrund), #fce4ec);
+  background-image: url('../img/patterns/sakura.svg');
+  background-repeat: repeat;
+  background-size: 300px;
   color: var(--text);
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.8;
   font-size: 1.1em;
   margin: 0;
   padding: 0;
+}
+
+h1, h2 {
+  font-family: 'Shippori Mincho', serif;
 }
 
 /* ===============================
@@ -180,7 +187,7 @@ body.japan {
 }
 
 .japan-nav a {
-  color: #ffffff;
+  color: var(--rot-pastell);
   text-decoration: none;
   font-weight: bold;
   display: inline-flex;
@@ -192,40 +199,71 @@ body.japan {
 }
 
 .japan-nav a:hover {
-  background-color: #ee8686;
+  background-color: var(--rot-pastell);
   color: #685151;
 }
 
 .japan-nav a.active {
-  background-color: var(--rot-pastell);
-  color: var(--text);
-  border: 2px solid var(--akzent-gold);
+  background-color: var(--rot-hell);
+  color: var(--rot-pastell);
+  border: 2px solid var(--rot);
   box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
 }
 
 /* ===============================
-   Scroll-to-Top Button
+   Dropdown-Menü
 ================================== */
-#scrollToTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: var(--rot);
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--rot-hell); /* oder deine Wunschfarbe */
+  border-radius: 4px;
+  padding: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: 1px solid var(--rot-hell);
+  min-width: 220px;
+  transition: opacity 0.3s ease;
+}
+
+
+
+.dropdown-menu a {
   color: #fff;
-  border: 2px solid var(--akzent-gold);
+  text-decoration: none;
+  display: block;
   padding: 10px 15px;
-  border-radius: 50px;
-  font-family: 'Orbitron', sans-serif;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#scrollToTopBtn:hover {
-  background-color: var(--rot-hell);
-  transform: scale(1.2) rotate(10deg);
+.dropdown-menu a:hover {
+  background-color: #b71c1c;
+  color: var(--text);
 }
 
+.japan-nav li a.active {
+  border: 2px solid #00BFFF;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+}
+
+/* ===============================
+   Kapitel-Toggle
+================================== */
 .kapitel-block {
   margin-bottom: 30px;
 }
@@ -257,16 +295,43 @@ body.japan {
 }
 
 .kapitel-content.open {
-  max-height: 2000px; /* groß genug für Inhalt */
+  max-height: 2000px;
   padding: 20px 0;
 }
 
-.toggle-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+/* ===============================
+   Scroll-to-Top Button
+================================== */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--rot);
+  color: #fff;
+  border: 2px solid var(--akzent-gold);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.toggle-content.open {
-  max-height: 500px; /* oder mehr, je nach Inhalt */
+#scrollToTopBtn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.1);
+}
+
+/* ===============================
+   footer
+================================== */
+.footer-japan {
+  background-color: var(--rot); 
+  color: var(--rot-pastell);    
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  font-style: italic;
+  position: relative;
+  border-top: 2px solid var(--rot-hell);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }

@@ -89,6 +89,69 @@ body.neuseeland {
   margin-right: 6px;
 }
 
+/* Grundstruktur */
+.neuseeland-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.neuseeland-nav li {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hauptlink */
+.neuseeland-nav a {
+  color: #ffcc00;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown-Menü */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* direkt unter dem Hauptlink */
+  left: 0;
+  background-color: #004d00;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  display: none;
+  min-width: 220px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #ffcc00;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Hover-Effekt */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Optional: Kein Abstand zwischen Hauptlink und Dropdown */
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* 📖 Kapitel-Toggle & Inhalt */
 .kapitel-block {
   margin: 20px 0;
@@ -227,4 +290,20 @@ body[data-theme="blau"]  #scrollToTopBtn { background-color: #3498db; }
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+.neuseeland-footer {
+  background-color: #004d40;
+  color: #ffcc00;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  border-top: 2px solid #00695c;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.neuseeland-footer p {
+  margin: 0;
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
