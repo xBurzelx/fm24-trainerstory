@@ -86,13 +86,13 @@ h1, h2 {
 .japan-trophaeen h2 {
   font-size: 1.8em;
   margin-bottom: 20px;
-  color: var(--akzent-gold);
+  color: var(--rot-pastell);
   border-bottom: 2px solid var(--rot);
   padding-bottom: 10px;
 }
 
 .trophy-category {
-  color: var(--akzent-gold);
+  color: var(--rot-pastell);
   font-size: 1.4em;
   margin-top: 40px;
   text-align: center;
@@ -181,7 +181,7 @@ h1, h2 {
   display: block;
   margin-top: 8px;
   font-weight: bold;
-  color: #ffcc00;
+  color: var(--rot-pastell);
 }
 
 /* 💬 Tooltip */
@@ -192,7 +192,7 @@ h1, h2 {
   left: 50%;
   transform: translateX(-50%);
   background: #222;
-  color: #ffcc00;
+  color: var(--rot-pastell);
   padding: 6px 10px;
   border-radius: 4px;
   white-space: nowrap;
@@ -250,6 +250,7 @@ h1, h2 {
 }
 
 #scrollToTopBtn:hover {
-  background-color: var(--rot);
-  transform: scale(1.2) rotate(10deg);
+    background-color: var(--rot);
+    transform: scale(1.2) rotate(10deg);
+}
 }
