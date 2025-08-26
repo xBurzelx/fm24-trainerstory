@@ -1,6 +1,6 @@
 .karriere-timeline {
   padding: 40px;
-  background: #111;
+  background: #157aff6c;
   color: white;
 }
 
@@ -157,11 +157,11 @@ img[class^="flag-"]:hover {
 .flag-japan,
 .flag-argentinien,
 .flag-niederland {
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgb(29, 130, 245);
 }
 
 .timeline-item.highlight {
-  border-left: 4px solid gold;
+  border: 4px solid rgb(117, 153, 255);
   animation: fadeInUp 1s ease;
 }
 @keyframes fadeInUp {
