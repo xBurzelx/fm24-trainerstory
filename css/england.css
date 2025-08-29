@@ -1,0 +1,41 @@
+body.manutd {
+  background-color: #fff5f5; /* leichtes Rot/Weiß für Hintergrund */
+  color: #990000; /* United-Rot für Text */
+  font-family: 'Quicksand', sans-serif;
+}
+
+.manutd-header {
+  background-color: #990000; /* kräftiges United-Rot */
+  color: #f1c40f; /* Gold für Kontrast */
+  text-align: center;
+  padding: 30px;
+}
+
+.manutd-logo {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.manutd-nav {
+  background-color: #660000; /* dunkleres Rot für Navigation */
+  padding: 10px 0;
+  text-align: center;
+}
+
+.manutd-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.manutd-nav a {
+  color: #f1c40f; /* Goldene Schrift */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.manutd-nav a:hover {
+  color: #ffffff; /* Weiß beim Hover */
+}
