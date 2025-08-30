@@ -2,23 +2,29 @@
    Farbvariablen für konsistentes Design
 ================================== */
 :root {
-  --orange: #ff7300;
-  --orange-hell: #ff9800;
-  --orange-pastell: #fda75b;
-  --hintergrund: #fffaf0;
-  --text: #4a1c1c;
-  --zitat-text: #5c0000;
-  --akzent-gold: #ffd700;
+  /* Elfenbeinküste Nationalfarben */
+  --cote-orange: #F77F00;
+  --cote-white: #FFFFFF;
+  --cote-green: #009E60;
+
+  /* ASEC Mimosas Vereinsfarben */
+  --asec-yellow: #FFD700; /* Goldgelb */
+  --asec-yellow-strong: #FFCC00; /* Kräftiger Gelbton */
+  --asec-black: #000000;
+
+  /* Kombinierte Akzente */
+  --highlight-border: var(--asec-yellow);
+  --flag-gradient: linear-gradient(to right, var(--cote-orange), var(--cote-white), var(--cote-green));
 }
 
 body.elfenbeinküste {
-  background-color: var(--hintergrund); /* warmes Elfenbein */
-  color: var(--text);
+  background-color: var(--cote-white); /* warmes Elfenbein */
+  color: var(--asec-black);
   font-family: 'Orbitron', sans-serif;
 }
 
 .elfenbeinküste-header {
-  background-color: var(--orange); /* kräftiges Orange */
+  background-color: var(--cote-orange);
   padding: 10px 0;
   text-align: center;
 }
@@ -27,17 +33,17 @@ body.elfenbeinküste {
   width: 100px;
   margin-top: 10px;
   border-radius: 8px;
-  border: 5px solid var(--text);
+  border: 5px solid var(--asec-black);
 }
 
 .elfenbeinküste-nav {
-  background-color: var(--orange);
+  background-color: var(--cote-orange);
   padding: 10px 0;
   text-align: center;
 }
 
 .elfenbeinküste-nav ul {
-  color: var(--orange-hell);
+  color: var(--cote-white);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -46,7 +52,7 @@ body.elfenbeinküste {
 }
 
 .elfenbeinküste-nav img {
-  width: 24px;
+  width: 32px;
   height: auto;
   vertical-align: middle;
   border-radius: 4px;
@@ -55,7 +61,7 @@ body.elfenbeinküste {
 }
 
 .elfenbeinküste-nav a {
-  color: var(--hintergrund);
+  color: var(--asec-black);
   text-decoration: none;
   font-weight: bold;
   display: inline-flex;
@@ -91,25 +97,25 @@ body.elfenbeinküste {
   display: none;
   opacity: 0;
   visibility: hidden;
-  background-color: var(--orange-hell); /* oder deine Wunschfarbe */
+  background-color: var(--cote-orange); /* oder deine Wunschfarbe */
   border-radius: 4px;
   padding: 5px 0;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  border: 1px solid var(--orange-hell);
+  border: 1px solid var(--cote-green);
   min-width: 220px;
   transition: opacity 0.3s ease;
 }
 
 .dropdown-menu a {
-  color: var(--hintergrund);
+  color: var(--cote-white);
   text-decoration: none;
   display: block;
   padding: 10px 15px;
 }
 
 .dropdown-menu a:hover {
-  background-color: #ff8800;
+  background-color: var(--cote-green);
   color: var(--text);
 }
 
@@ -117,4 +123,135 @@ body.elfenbeinküste {
   border: 2px solid #00BFFF;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+}
+
+/* ===============================
+   Kapitelcontainer
+================================== */
+.kapitel.elfenbeinküste {
+  background-color: var(--cote-white);
+  border-left: 6px solid var(--cote-orange);
+  box-shadow: 0 4px 12px rgba(179, 0, 0, 0.1);
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   Kapitel-Toggle
+================================== */
+.kapitel-block {
+  margin-bottom: 30px;
+}
+
+.kapitel-toggle {
+  background: linear-gradient(to right, var(--cote-orange), var(--cote-green));
+  color: var(--cote-white);
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.kapitel-toggle:hover {
+  background-color: var(--cote-orange);
+}
+
+.kapitel-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: var(--cote-green);
+  border-radius: 0 0 8px 8px;
+}
+
+.kapitel-content.open {
+  max-height: 2000px;
+  padding: 20px 0;
+}
+
+/* ===============================
+   Scroll-to-Top Button
+================================== */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--cote-orange);
+  color: var(--asec-black);
+  border: 2px solid var(--asec-yellow);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--cote-orange);
+  transform: scale(1.1);
+}
+
+/* ===============================
+   footer
+================================== */
+.footer-elfenbeinküste {
+  background-color: var(--cote-orange);
+  color: var(--cote-white);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  font-style: italic;
+  position: relative;
+  border-top: 2px solid var(--cote-orange);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===============================
+   Scroll-to-Top Button
+================================== */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--cote-orange);
+  color: var(--cote-white);
+  border: 2px solid var(--asec-yellow-strong);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--cote-orange);
+  transform: scale(1.1);
+}
+
+/* ===============================
+   footer
+================================== */
+.footer-elfenbeinküste {
+  background-color: var(--cote-orange);
+  color: var(--cote-white);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  font-style: italic;
+  position: relative;
+  border-top: 2px solid var(--cote-orange);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
