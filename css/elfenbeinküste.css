@@ -18,7 +18,7 @@
 }
 
 body.elfenbeinküste {
-  background-color: var(--cote-white); /* warmes Elfenbein */
+  background-color: var(--cote-white);
   color: var(--asec-black);
   font-family: 'Orbitron', sans-serif;
 }
@@ -139,6 +139,11 @@ body.elfenbeinküste {
   animation: fadeInUp 0.8s ease-out;
 }
 
+.kapitel-block {
+  text-align: center;
+  color: var(--cote-orange);
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -159,7 +164,7 @@ body.elfenbeinküste {
   padding: 12px 20px;
   border: none;
   width: 100%;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.3s ease;
@@ -171,6 +176,8 @@ body.elfenbeinküste {
 
 .kapitel-content {
   max-height: 0;
+  color: var(--cote-white);
+  text-align: center;
   overflow: hidden;
   transition: max-height 0.5s ease;
   background-color: var(--cote-green);
@@ -180,6 +187,12 @@ body.elfenbeinküste {
 .kapitel-content.open {
   max-height: 2000px;
   padding: 20px 0;
+}
+
+.prolog-text {
+  padding: 20px;
+  font-style: italic;
+  color: var(--cote-white);
 }
 
 /* ===============================
@@ -202,21 +215,6 @@ body.elfenbeinküste {
 #scrollToTopBtn:hover {
   background-color: var(--cote-orange);
   transform: scale(1.1);
-}
-
-/* ===============================
-   footer
-================================== */
-.footer-elfenbeinküste {
-  background-color: var(--cote-orange);
-  color: var(--cote-white);
-  text-align: center;
-  padding: 20px;
-  font-size: 0.95em;
-  font-style: italic;
-  position: relative;
-  border-top: 2px solid var(--cote-orange);
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* ===============================

@@ -1,0 +1,324 @@
+/* ===============================
+   Farbvariablen für konsistentes Design
+================================== */
+:root {
+  /* Elfenbeinküste Nationalfarben */
+  --cote-orange: #F77F00;
+  --cote-white: #FFFFFF;
+  --cote-green: #009E60;
+
+  /* ASEC Mimosas Vereinsfarben */
+  --asec-yellow: #FFD700; /* Goldgelb */
+  --asec-yellow-strong: #FFCC00; /* Kräftiger Gelbton */
+  --asec-black: #000000;
+
+  /* Kombinierte Akzente */
+  --highlight-border: var(--asec-yellow);
+  --flag-gradient: linear-gradient(to right, var(--cote-orange), var(--cote-white), var(--cote-green));
+}
+
+/* 🌍 Basis-Layout & Schrift */
+body.elfenbeinkueste {
+  background: linear-gradient(to bottom, var(--asec-black), var(--cote-green), var(--cote-white));
+  color: var(--asec-yellow-strong);
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🧭 Header */
+.elfenbeinkueste-header {
+  background-color: var(--cote-orange);
+  color: var(--cote-white);
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.elfenbeinkueste-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.elfenbeinkueste-header .subtitle {
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: var(--asec-yellow);
+}
+
+/* 🌿 Grafiken im Header */
+.elfenbeinkueste-graphics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.neuseeland-logo {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.elfenbeinkueste-logo:last-child {
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--asec-yellow-strong);
+}
+
+/* 🧭 Navigation */
+.elfenbeinkueste-nav {
+  background-color: var(--cote-green);
+  padding: 10px 0;
+  text-align: center;
+}
+
+.elfenbeinkueste-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.elfenbeinkueste-nav li {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.elfenbeinkueste-nav a {
+  color: var(--asec-yellow);
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.elfenbeinkueste-nav a:hover {
+  background-color: var(--cote-green);
+  color: var(--asec-yellow-strong);
+}
+
+.elfenbeinkueste-nav li a.active {
+  border: 2px solid var(--highlight-border);
+  border-radius: 8px;
+  box-shadow: 0 0 8px var(--highlight-border);
+}
+
+.elfenbeinkueste-nav img {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+/* 📂 Dropdown-Menü */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--cote-green);
+  padding: 0;
+  margin-top: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px var(--asec-black);
+  border: 1px solid var(--highlight-border);
+  display: none;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--asec-yellow);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 🏆 Trophäen-Sektion */
+.elfenbeinkueste-trophaeen {
+  background-color: var(--asec-black);
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  color: var(--asec-yellow);
+}
+
+.elfenbeinkueste-trophaeen h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: var(--asec-yellow);
+  border-bottom: 2px solid var(--highlight-border);
+  padding-bottom: 10px;
+}
+
+.trophy-category {
+  background-color: var(--cote-green);
+  color: var(--asec-yellow);
+  font-size: 1.4em;
+  margin: 40px;
+  text-align: center;
+  border-bottom: 4px solid var(--highlight-border);
+  padding-bottom: 10px;
+}
+
+/* 🏅 Trophäenliste */
+.elfenbeinkueste-trophaeen ul {
+  list-style-type: "🏅 ";
+  padding-left: 1.2em;
+  margin-bottom: 30px;
+}
+
+.elfenbeinkueste-trophaeen ul li {
+  margin-bottom: 8px;
+}
+
+/* 📖 Zitat am Ende */
+.elfenbeinkueste-trophaeen .prolog-text {
+  background-color: var(--asec-black);
+  color: var(--asec-yellow);
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px var(--asec-black);
+}
+
+/* 🖼️ Trophäenvitrine */
+.vitrine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: var(--asec-black);
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--asec-black);
+}
+
+/* 🏆 Einzelne Trophäe */
+.trophy {
+  width: 120px;
+  text-align: center;
+  background-color: var(--cote-green);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px var(--highlight-border);
+  transition: transform 0.3s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.trophy:nth-child(1) { animation-delay: 0.1s; }
+.trophy:nth-child(2) { animation-delay: 0.2s; }
+.trophy:nth-child(3) { animation-delay: 0.3s; }
+.trophy:nth-child(4) { animation-delay: 0.4s; }
+.trophy:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trophy:hover {
+  transform: scale(1.05);
+}
+
+/* 🖼️ Trophäenbild */
+.trophy img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* 📅 Jahr */
+.trophy span {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: var(--asec-yellow);
+}
+
+/* 💬 Tooltip */
+.trophy::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--asec-black);
+  color: var(--asec-yellow);
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  font-size: 0.9em;
+  z-index: 10;
+}
+
+.trophy:hover::after {
+  opacity: 1;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .vitrine {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .trophy {
+    width: 80%;
+  }
+
+  .neuseeland-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ===============================
+   footer
+================================== */
+.footer-elfenbeinküste {
+  background-color: var(--cote-orange);
+  color: var(--cote-white);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  font-style: italic;
+  position: relative;
+  border-top: 2px solid var(--cote-orange);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
