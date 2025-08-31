@@ -1,9 +1,25 @@
+:root {
+  --text: #ffffff;
+  /* Japan */
+  --rot: #b30000;
+  --rot-hell: #e60000;
+  --zitat-text: #5c0000;
+  --akzent-gold: #ffd700;
+
+  /* Elfenbeinküste Nationalfarben */
+  --cote-orange: #F77F00;
+  --cote-green: #009E60;
+  --asec-yellow: #FFD700; 
+  --asec-yellow-strong: #FFCC00; 
+  --asec-black: #000000;
+}
+
 /* === Grundlayout === */
 body {
   margin: 0;
-  background-color: #000000;
+  background-color: var(--asec-black);
   font-family: 'Segoe UI', sans-serif;
-  color: white;
+  color: var(--text);
   text-align: center;
   overflow-x: hidden;
 }
@@ -39,7 +55,7 @@ body {
 .header-content h1 {
   font-size: 2.8em;
   color: #ff69b4;
-  text-shadow: 0 0 10px #ff69b4, 0 0 20px #fff;
+  text-shadow: 0 0 10px #ff69b4, 0 0 20px var(--text);
   margin: 0;
 }
 
@@ -51,7 +67,7 @@ body {
   width: 100%;
   height: 50px;
   background-color: rgba(131, 214, 249, 0.85);
-  color: white;
+  color: var(--text);
   font-size: 1.2em;
   font-weight: bold;
   display: flex;
@@ -66,7 +82,7 @@ body {
   width: 32px;
   height: auto;
   border-radius: 4px;
-  box-shadow: 0 0 5px white;
+  box-shadow: 0 0 5px var(--text);
 }
 
 /* === Chaos-Flaggen im Header === */
@@ -309,4 +325,30 @@ body {
   display: block;
   font-size: 0.65em;
   color: white;
+}
+
+.wm-spotlight {
+  position: relative;
+  display: inline-block;
+}
+
+.wm-pokal {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 12px gold);
+}
+
+.wm-pokal:hover {
+  transform: scale(1.05);
+}
+
+#confetti-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
 }

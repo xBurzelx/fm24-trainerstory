@@ -28,10 +28,10 @@
         <img src="img/flaggs/neuseeland.png" class="flag chaos flag-nz" alt="Neuseeland">
         <img src="img/flaggs/japan.png" class="flag chaos flag-jp" alt="Japan">
         <img src="img/logos/dunedin-city-royals.png" class="flag chaos flag-dunedin" alt="Dunedin City Royals">
-        <img src="img/logos/nagoya-grampus.png" class="flag chaos flag-nagoya" alt="Nagoya Grampus">
-        <!--  
+        <img src="img/logos/nagoya-grampus.png" class="flag chaos flag-nagoya" alt="Nagoya Grampus"> 
         <img src="img/flaggs/elfenbeinküste.png" class="flag chaos flag-ci" alt="Elfenbeinküste">
         <img src="img/logos/asec-mimosas.png" class="flag chaos flag-asec" alt="ASEC Mimosas">
+        <!-- 
         <img src="img/flaggs/argentinien.png" class="flag chaos flag-ar" alt="Argentinien">
         <img src="img/logos/rosario-central.png" class="flag chaos flag-rosario" alt="Rosario Central">
         <img src="img/flaggs/usa.png" class="flag chaos flag-usa" alt="USA">
@@ -180,10 +180,19 @@
     <section class="karriere-timeline">
       <h2 class="timeline-title">
         <img src="img/favicon.png" alt="Burzel-Icon" class="title-icon">
-        xBurzelx`s Reise & Erfolge<br><br>
-        <img src="img/trophies/Weltmeisterschaft.png" alt="WM-Pokal" class="title-icon">
-        2026 mit Elfenbeinküste
+        xBurzelx`s Reise & Erfolge
       </h2>
+      
+      <section class="wm-hero">
+        <div class="wm-spotlight">
+          <img src="img/trophies/Weltmeisterschaft.png" alt="Weltmeister 2026" class="wm-pokal">
+          <canvas id="confetti-canvas"></canvas>
+          <div class="wm-caption">
+            <h2>Weltmeister 2026 mit der Elfenbeinküste <img src="img/flaggs/elfenbeinküste.png" alt="Elfenbeinküste" class="flag" width="35px"></h2>
+            <p>„Nicht durch Zufall. Sondern durch Arbeit, Mut und Liebe zum Spiel.“</p>
+          </div>
+        </div>
+      </section>
 
         <div class="timeline">
           <div class="timeline-grid">
@@ -242,6 +251,8 @@
           </div>
     </section>
 
-  <script src="js/interaktion.js"></script>
+    <script src="js/interaktion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/confetti-pokal.js"></script>
   </body>
 </html>
