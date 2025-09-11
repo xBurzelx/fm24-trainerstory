@@ -197,7 +197,7 @@ h1, h2 {
 
 .japan-nav a:hover {
   background-color: var(--rot-pastell);
-  color: var(--text);
+  color: var(--rot-hell);
 }
 
 .japan-nav a.active {
