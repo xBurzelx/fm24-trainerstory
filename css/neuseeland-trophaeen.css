@@ -47,9 +47,26 @@ body.neuseeland {
   box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
 }
 
+/* 🌿 Grafiken im Header */
+.neuseeland-graphics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.neuseeland-logo {
+  width: 120px;
+  margin-top: 10px;
+}
+
 /* 🧭 Navigation */
 .neuseeland-nav {
   background-color: #004d40;
+  background-image: url('../img/neuseeland/Maori_Korupae_Muster.png'); /* dezentes SVG oder PNG-Muster */
+  background-repeat: repeat;
+  background-size: contain;
   padding: 10px 0;
   text-align: center;
 }
@@ -60,23 +77,14 @@ body.neuseeland {
   margin: 0;
   display: inline-flex;
   gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.neuseeland-nav li {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
 }
 
 .neuseeland-nav a {
-  color: #ffcc00;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: flex;
+  color: #ffd700;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 6px 12px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
@@ -89,38 +97,59 @@ body.neuseeland {
 .neuseeland-nav li a.active {
   border: 2px solid #00BFFF;
   border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.6);
+  background-color: #00332f;
+  transform: scale(1.05);
 }
 
 .neuseeland-nav img {
-  width: 24px;
-  height: auto;
-  vertical-align: middle;
-  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
   margin-right: 6px;
 }
 
-/* 📂 Dropdown-Menü */
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .neuseeland-nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Grundstruktur */
+.neuseeland-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.neuseeland-nav li {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hauptlink */
+.neuseeland-nav a {
+  color: #ffcc00;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown-Menü */
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 100%; /* direkt unter dem Hauptlink */
   left: 0;
   background-color: #004d00;
   padding: 0;
-  margin-top: 0;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  border: 1px solid #00695c;
+  margin: 0;
+  border-radius: 0;
   display: none;
   min-width: 220px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-.dropdown-menu li {
-  margin: 0;
 }
 
 .dropdown-menu li a {
@@ -131,8 +160,23 @@ body.neuseeland {
   white-space: nowrap;
 }
 
+/* Hover-Effekt */
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+/* Optional: Kein Abstand zwischen Hauptlink und Dropdown */
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
 }

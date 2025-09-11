@@ -1,20 +1,44 @@
+/* ===============================
+   Farbvariablen für konsistentes Design
+================================== */
+:root {
+  /* 🇳🇿 Neuseeland-Farben */
+  --nz-green: #2E7D32;         /* Natur, Wälder */
+  --nz-blue: #1565C0;          /* Ozean, Himmel */
+  --nz-silver: #F1F3F5;        /* Silver Fern, Klarheit */
+  --nz-black: #000000;         /* Sportteams, Eleganz */
+  --nz-gold: #FFD700;          /* Prestige, Māori-Kunst */
+
+  /* 🏙️ Dunedin-Farben */
+  --dunedin-darkblue: #2F4757; /* Historisch, maritim */
+  --dunedin-steel: #425968;    /* Architektur, Ernsthaftigkeit */
+  --dunedin-mist: #93A3AF;     /* Küstennebel, Eleganz */
+  --dunedin-white: #F1F3F5;    /* Bahnhofsfliesen, Klarheit */
+
+  /* ⚽️ Akzentfarben */
+  --accent-lightblue: #00BFFF; /* Aktiver Link, Frische */
+  --accent-hovergreen: #00695c; /* Hover-Effekt */
+}
+
 /* 🌍 Basis-Layout & Schrift */
 body.neuseeland {
-  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-  color: #004d40;
+  background: linear-gradient(to bottom, var(--nz-green), var(--nz-silver), var(--nz-green));
+  color: var(--nz-black);
   font-family: 'Orbitron', sans-serif;
 }
 
-/* 🧭 Header */
+/* ===============================
+   Neuseeland Header
+================================== */
 .neuseeland-header {
-  background-color: #004d40;
-  color: #ffffff;
+  background: linear-gradient(to right, var(--accent-hovergreen), var(--nz-green), var(--nz-silver));
+  color: var(--dunedin-white);
   text-align: center;
-  padding: 40px 20px;
-  position: relative;
+  padding: 30px;
 }
 
 .neuseeland-header h1 {
+  text-shadow: var(--neuseeland-gold) 2px 2px 4px;
   font-size: 2.5em;
   margin: 0;
 }
@@ -23,29 +47,27 @@ body.neuseeland {
   font-style: italic;
   margin-top: 10px;
   font-size: 1.2em;
-  color: #b2dfdb;
-}
-
-/* 🌿 Grafiken im Header */
-.neuseeland-graphics {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  color: var(--neuseeland-gold);
 }
 
 .neuseeland-logo {
-  width: 120px;
+  width: 100px;
   margin-top: 10px;
+  border: var(--dunkel) 3px solid;
 }
 
-/* 🧭 Navigation */
+/* ===============================
+   Navigation
+================================== */
 .neuseeland-nav {
-  background-color: #004d40;
+  background-color: var(--nz-green);
+  background-image: url(../img/neuseeland/Maori_Korupae_Muster.png); /* PNG-Muster */
+  background-repeat: repeat;
+  background-size: contain;
   padding: 10px 0;
   text-align: center;
 }
+
 
 .neuseeland-nav ul {
   list-style: none;
@@ -53,27 +75,6 @@ body.neuseeland {
   margin: 0;
   display: inline-flex;
   gap: 20px;
-}
-
-.neuseeland-nav a {
-  color: #ffd700;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.neuseeland-nav a:hover {
-  background-color: #00695c;
-  color: #b2dfdb;
-}
-
-.neuseeland-nav li a.active {
-  border: 2px solid #00BFFF;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
 }
 
 .neuseeland-nav img {
@@ -84,67 +85,77 @@ body.neuseeland {
   margin-right: 6px;
 }
 
-/* Grundstruktur */
-.neuseeland-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.neuseeland-nav li {
-  position: relative;
-  display: inline-block;
-}
-
-/* Hauptlink */
 .neuseeland-nav a {
-  color: #ffcc00;
+  color: var(--dunedin-white);
   text-decoration: none;
-  padding: 10px 15px;
-  display: flex;
+  font-weight: bold;
+  display: inline-flex;
   align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dropdown-Menü */
-.dropdown-menu {
-  position: absolute;
-  top: 100%; /* direkt unter dem Hauptlink */
-  left: 0;
-  background-color: #004d00;
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  display: none;
-  min-width: 220px;
+.neuseeland-nav a:hover {
+  background-color: var(--accent-lightblue);
+  color: var(--dunedin-white);
 }
 
-.dropdown-menu li a {
-  display: block;
-  padding: 10px 15px;
-  color: #ffcc00;
-  text-decoration: none;
-  white-space: nowrap;
+.neuseeland-nav a.active {
+  background-color: var(--accent-hovergreen);
+  color: var(--dunedin-white);
+  border: 2px solid var(--dunkel);
+  box-shadow: 0 0 8px var(--blau);
 }
 
-/* Hover-Effekt */
+/* ===============================
+   Dropdown-Menü
+================================== */
+.dropdown {
+  position: relative;
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
-}
-
-/* Optional: Kein Abstand zwischen Hauptlink und Dropdown */
-.dropdown-menu li {
-  margin: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
   opacity: 0;
   visibility: hidden;
+  background-color: var(--accent-hovergreen); 
+  border-radius: 4px;
+  padding: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: 1px solid var(--blau);
+  min-width: 220px;
   transition: opacity 0.3s ease;
 }
 
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
+.dropdown-menu a {
+  color: var(--dunedin-white);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--blau);
+  color: var(--dunedin-white);
+}
+
+.neuseeland-nav li a.active {
+  border: 2px solid var(--blau);
+  border-radius: 8px;
+  box-shadow: 0 0 8px var(--dunkel);
 }
 
 /* 📖 Kapitel-Toggle & Inhalt */

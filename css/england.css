@@ -1,28 +1,58 @@
-body.manutd {
-  background-color: #fff5f5; /* leichtes Rot/Weiß für Hintergrund */
-  color: #990000; /* United-Rot für Text */
-  font-family: 'Quicksand', sans-serif;
+:root {
+  --england-rot: #ff0000;
+  --england-rot-dunkel: #910000;
+  --england-gold: #f1c40f;
+  --hintergrund: #fff5f5;
+  --text: #990000;
+  --dunkel: #000000;
+  --blau: #0074D9;
 }
 
-.manutd-header {
-  background-color: #990000; /* kräftiges United-Rot */
-  color: #f1c40f; /* Gold für Kontrast */
+body.england {
+  background-color: var(--hintergrund);
+  color: var(--text);
+  font-family: 'Georgia', serif;
+}
+
+/* ===============================
+   England Header
+================================== */
+.england-header {
+  background: linear-gradient(to right, var(--england-rot), var(--england-rot-dunkel));
+  color: var(--hintergrund);
   text-align: center;
   padding: 30px;
 }
 
-.manutd-logo {
-  width: 80px;
-  margin-top: 10px;
+.england-header h1 {
+  text-shadow: var(--england-gold) 2px 2px 4px;
+  font-size: 2.5em;
+  margin: 0;
 }
 
-.manutd-nav {
-  background-color: #660000; /* dunkleres Rot für Navigation */
+.england-header .subtitle {
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: var(--england-gold);
+}
+
+.england-logo {
+  width: 100px;
+  margin-top: 10px;
+  border: var(--dunkel) 3px solid;
+}
+
+/* ===============================
+   Navigation
+================================== */
+.england-nav {
+  background-color: var(--england-rot-dunkel);
   padding: 10px 0;
   text-align: center;
 }
 
-.manutd-nav ul {
+.england-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -30,12 +60,83 @@ body.manutd {
   gap: 20px;
 }
 
-.manutd-nav a {
-  color: #f1c40f; /* Goldene Schrift */
-  text-decoration: none;
-  font-weight: bold;
+.england-nav img {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 4px;
+  margin-right: 6px;
 }
 
-.manutd-nav a:hover {
-  color: #ffffff; /* Weiß beim Hover */
+.england-nav a {
+  color: var(--hintergrund);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.england-nav a:hover {
+  background-color: var(--blau);
+  color: var(--text);
+}
+
+.england-nav a.active {
+  background-color: var(--hintergrund);
+  color: var(--hintergrund);
+  border: 2px solid var(--dunkel);
+  box-shadow: 0 0 8px var(--blau);
+}
+
+/* ===============================
+   Dropdown-Menü
+================================== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--england-rot); 
+  border-radius: 4px;
+  padding: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: 1px solid var(--blau);
+  min-width: 220px;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown-menu a {
+  color: var(--hintergrund);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--blau);
+  color: var(--hintergrund);
+}
+
+.england-nav li a.active {
+  border: 2px solid var(--blau);
+  border-radius: 8px;
+  box-shadow: 0 0 8px var(--dunkel);
 }

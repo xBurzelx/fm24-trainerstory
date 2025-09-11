@@ -1,23 +1,51 @@
+:root {
+  --blau: #001f3f;
+  --blau-hell: #0074D9;
+  --blau-pastell: #cce7ff;
+  --hintergrund: #ff4136;
+  --text: #ffffff;
+  --zitat-text: #ffcccb;
+  --akzent-gold: #ffd700;
+}
+
 body.usa {
-  background-color: #001f3f; /* Dunkelblau */
-  color: #ffffff;
+  background-color: var(--blau);
+  color: var(--text);
   font-family: 'Orbitron', sans-serif;
 }
 
+/* ===============================
+   USA Header
+================================== */
 .usa-header {
-  background-color: #ff4136; /* kräftiges Rot */
-  color: #ffffff;
+  background: linear-gradient(to right, var(--blau), var(--blau-hell));
+  color: var(--text);
   text-align: center;
   padding: 30px;
 }
 
+.usa-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.usa-header .subtitle {
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: var(--blau-pastell);
+}
+
 .usa-logo {
-  width: 80px;
+  width: 100px;
   margin-top: 10px;
 }
 
+/* ===============================
+   Navigation
+================================== */
 .usa-nav {
-  background-color: #0074D9; /* Blau für Navigation */
+  background-color: var(--blau-hell);
   padding: 10px 0;
   text-align: center;
 }
@@ -30,12 +58,83 @@ body.usa {
   gap: 20px;
 }
 
+.usa-nav img {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
 .usa-nav a {
-  color: #ffffff;
+  color: var(--blau-pastell);
   text-decoration: none;
   font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .usa-nav a:hover {
-  color: #ffcccb;
+  background-color: var(--blau-pastell);
+  color: var(--text);
+}
+
+.usa-nav a.active {
+  background-color: var(--blau-hell);
+  color: var(--hintergrund);
+  border: 2px solid var(--rot);
+  box-shadow: 0 0 8px var(--akzent-gold);
+}
+
+/* ===============================
+   Dropdown-Menü
+================================== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--blau-hell); /* oder deine Wunschfarbe */
+  border-radius: 4px;
+  padding: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: 1px solid var(--hintergrund);
+  min-width: 220px;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown-menu a {
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--blau-pastell);
+  color: var(--text);
+}
+
+.usa-nav li a.active {
+  border: 2px solid var(--hintergrund);
+  border-radius: 8px;
+  box-shadow: 0 0 8px var(--blau-hell);
 }
