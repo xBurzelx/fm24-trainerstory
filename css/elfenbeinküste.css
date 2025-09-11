@@ -24,7 +24,7 @@ body.elfenbeinküste {
 }
 
 .elfenbeinküste-header {
-  background-color: var(--cote-orange);
+  background: linear-gradient(to right, var(--cote-orange), var(--cote-white), var(--cote-green));
   padding: 10px 0;
   text-align: center;
 }
@@ -37,13 +37,17 @@ body.elfenbeinküste {
 }
 
 .elfenbeinküste-nav {
-  background-color: var(--cote-orange);
+  background-image: url('../img/elfenbeinkueste/muster-elfenbeinkueste.png'); /* dein Musterbild */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 10px 0;
   text-align: center;
 }
 
 .elfenbeinküste-nav ul {
   color: var(--cote-white);
+  text-shadow: var(--asec-yellow) 0 0 20px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -61,7 +65,8 @@ body.elfenbeinküste {
 }
 
 .elfenbeinküste-nav a {
-  color: var(--asec-black);
+  color: var(--cote-white);
+  text-shadow: var(--asec-yellow) 0 0 10px;
   text-decoration: none;
   font-weight: bold;
   display: inline-flex;
