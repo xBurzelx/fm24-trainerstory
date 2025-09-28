@@ -313,3 +313,41 @@ body[data-theme="blau"]  #scrollToTopBtn { background-color: #3498db; }
   font-style: italic;
   letter-spacing: 0.5px;
 }
+
+/* ===============================
+   abschließender Link
+================================== */
+.kapitel-next {
+  margin-top: 3em;
+  padding-top: 2em;
+  text-align: center;
+  background: linear-gradient(to right, var(--nz-gold) 0%, var(--nz-black) 100%);
+  border-radius: 8px;
+  color: var(--dunedin-white);
+}
+.kapitel-divider {
+  border: none;
+  height: 2px;
+  background: var(--nz-silver);
+  margin-bottom: 1em;
+}
+.kapitel-abschluss-text p {
+  font-size: 1.1em;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+.kapitel-link {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  background-color: var(--nz-black);
+  color: var(--nz-gold);
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid var(--nz-gold);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.kapitel-link:hover {
+  background-color: var(--nz-gold);
+  color: var(--nz-black);
+}

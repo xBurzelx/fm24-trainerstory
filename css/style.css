@@ -1,17 +1,30 @@
+
+/* Farben Übersicht */
 :root {
+
   --text: #ffffff;
+
+  /* 🇳🇿 Neuseeland-Farben */
+  --nz-green: #2E7D32;         
+  --nz-blue: #1565C0;          
+  --nz-silver: #c0c0c0;        
+  --nz-gold: #FFD700; 
+
   /* Japan */
   --rot: #b30000;
   --rot-hell: #e60000;
   --zitat-text: #5c0000;
   --akzent-gold: #ffd700;
 
-  /* Elfenbeinküste Nationalfarben */
+  /* Elfenbeinküste */
   --cote-orange: #F77F00;
-  --cote-green: #009E60;
-  --asec-yellow: #FFD700; 
-  --asec-yellow-strong: #FFCC00; 
+  --cote-green: #009E60; 
   --asec-black: #000000;
+
+  /* England */
+  --england-rot: #ff0000;
+  --england-rot-dunkel: #910000;
+  --england-gold: #f1c40f;
 }
 
 /* === Grundlayout === */
@@ -22,6 +35,20 @@ body {
   color: var(--text);
   text-align: center;
   overflow-x: hidden;
+}
+
+.search-button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* === Header === */
@@ -96,10 +123,14 @@ body {
 }
 
 /* Individuelle Positionen */
-.flag-usa     { top: 20px;  left: 10%;  --angle: -15deg; }
-.flag-chicago { top: 80px;  left: 80%;  --angle: 20deg; }
-.flag-japan   { top: 150px; left: 25%;  --angle: -30deg; }
 .flag-nl      { top: 150px; left: 70%;  --angle: 10deg; }
+.flag-dunedin { top: 80px;  left: 75%;  --angle: 25deg; }
+.flag-japan   { top: 150px; left: 25%;  --angle: -30deg; }
+.flag-nagoya  { top: 80px;  left: 30%;  --angle: -15deg; }
+.flag-elfenbein  { top: 150px; left: 85%;  --angle: 5deg;  }
+.flag-asec    { top: 80px;  left: 15%;  --angle: -5deg; }
+.flag-england { top: 50px;  left: 50%;  --angle: 0deg; }
+.flag-chelsea { top: 100px; left: 40%;  --angle: 15deg; }
 
 @keyframes floatChaos {
   0%   { transform: translateY(0) rotate(var(--angle)); }
@@ -327,28 +358,29 @@ body {
   color: white;
 }
 
-.wm-spotlight {
+.wm-spotlight, .em-spotlight {
   position: relative;
   display: inline-block;
 }
 
-.wm-pokal {
+.wm-pokal, .em-pokal {
   width: 150px;
+  margin: 20px;
   cursor: pointer;
   transition: transform 0.3s ease;
   filter: drop-shadow(0 0 12px gold);
 }
 
-.wm-pokal:hover {
+.wm-pokal:hover, .em-pokal:hover {
   transform: scale(1.05);
 }
 
 #confetti-canvas {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
-  z-index: 10;
+  z-index: 9999;
 }

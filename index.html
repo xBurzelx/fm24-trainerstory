@@ -31,26 +31,27 @@
         <img src="img/logos/nagoya-grampus.png" class="flag chaos flag-nagoya" alt="Nagoya Grampus"> 
         <img src="img/flaggs/elfenbeinküste.png" class="flag chaos flag-ci" alt="Elfenbeinküste">
         <img src="img/logos/asec-mimosas.png" class="flag chaos flag-asec" alt="ASEC Mimosas">
+        <img src="img/flaggs/england.png" class="flag chaos flag-england" alt="England">
+        <img src="img/logos/Chelsea_FC.svg" class="flag chaos flag-chelsea" alt="Chelsea FC">
         <!--
         <img src="img/flaggs/usa.png" class="flag chaos flag-usa" alt="USA">
         <img src="img/logos/chicago-fire.png" class="flag chaos flag-chicago" alt="Chicago Fire"> 
         <img src="img/flaggs/argentinien.png" class="flag chaos flag-ar" alt="Argentinien">
         <img src="img/logos/rosario-central.png" class="flag chaos flag-rosario" alt="Rosario Central">
-        <img src="img/flaggs/england.png" class="flag chaos flag-england" alt="England">
-        <img src="img/logos/#" class="flag chaos flag-#" alt="#">
         -->
       </div>
     </div>
 
     <div class="filter-bar">
+      <a class="search-button">Suche<img src="img/buttons/pfeil.png" alt="pfeil" class="pfeil button" width="40px" ></a>
       <button data-filter="all">Alle</button>
       <button data-filter="ozeanien">🏝️ Ozeanien - Kapitel 1</button>
       <button data-filter="asien">🏯 Asien - Kapitel 2</button>
       <button data-filter="afrika">🕌 Afrika - Kapitel 3</button>
+      <button data-filter="europa">🏰 Europa - Kapitel 4</button>
 <!-- Deaktivierte Seiten
-      <button data-filter="amerika">🏟️ Amerika - Kapitel 4</button>
-      <button data-filter="suedamerika">🏞️ Südamerika - Kapitel 5</button>
-      <button data-filter="europa">🏰 Europa - Kapitel 6</button>
+      <button data-filter="amerika">🏟️ Amerika - Kapitel 5</button>
+      <button data-filter="suedamerika">🏞️ Südamerika - Kapitel 6</button>
 -->
     </div>
 
@@ -163,7 +164,53 @@
                 <img src="img/trophies/Elfenbeinkuestes Supercup.png" alt="Super Cup der Elfenbeinküste">
                 <span>2027</span>
               </div>
+              <div class="trophy" title="CAF Champions League">
+                <img src="img/trophies/Afrikas Champions League.png" alt="CAF Champions League">
+                <span>2027</span>
+              </div>
+              <div class="trophy" title="National Cup der Elfenbeinküste">
+                <img src="img/trophies/Elfenbeinkuestes National Cup.png" alt="National Cup der Elfenbeinküste">
+                <span>2027</span>
+              </div>
             </div>
+        </div>
+      </a>
+
+      <!-- England - Chelsea FC -->
+      <a href="kapitel/england.html" class="flag-marker europa" style="top: 32%; left: 46%;">
+        <img src="img/flaggs/england.png" alt="England" class="flag">
+        <div class="tooltip en">
+          <img src="img/logos/Chelsea_FC.svg" alt="Chelsea FC" class="logo">
+          <div class="club-name">Chelsea FC</div>
+          <img src="img/flaggs/england.png" alt="England Flagge" class="flag-icon">
+
+          <!-- Mini-Vitrine -->
+          <div class="vitrine">
+            <div class="trophy" title="Premier Division">
+              <img src="img/trophies/Premier Division England.png" alt="Premier Division">
+              <span>2028</span>
+            </div>
+            <div class="trophy" title="FA Cup">
+              <img src="img/trophies/FA Cup.png" alt="FA Cup">
+              <span>2028</span>
+            </div>
+            <div class="trophy" title="Carabao Cup">
+              <img src="img/trophies/Carabao Cup.png" alt="Carabao Cup">
+              <span>2028</span>
+            </div>
+            <div class="trophy" title="UEFA Champions League">
+              <img src="img/trophies/UEFA Champions League.png" alt="UEFA Champions League">
+              <span>2028</span>
+            </div>
+            <div class="trophy" title="Community Shield">
+              <img src="img/trophies/Community Shield.png" alt="Community Shield">
+              <span>2028</span>
+            </div>
+            <div class="trophy" title="UEFA Supercup">
+              <img src="img/trophies/UEFA-Superpokal.png" alt="UEFA Supercup">
+              <span>2028</span>
+            </div>
+          </div>
         </div>
       </a>
 
@@ -185,15 +232,6 @@
           <p>Rosario Central</p>
         </div>
       </a>
-
-      
-      <a href="kapitel/england.html" class="flag-marker europa" style="top: 32%; left: 46%;">
-        <img src="img/flaggs/england.png" alt="England" class="flag">
-        <div class="tooltip en">
-          <img src="img/logos/#" alt="#" class="logo">
-          <p>-</p>
-        </div>
-      </a>
       -->
     </div>
 
@@ -210,6 +248,16 @@
           <div class="wm-caption">
             <h2>Weltmeister 2026 mit der Elfenbeinküste <img src="img/flaggs/elfenbeinküste.png" alt="Elfenbeinküste" class="flag" width="35px"></h2>
             <p>„Nicht durch Zufall. Sondern durch Arbeit, Mut und Liebe zum Spiel.“</p>
+          </div>
+        </div>
+      </section>
+      <section class="em-hero">
+        <div class="em-spotlight">
+          <img src="img/trophies/Europameisterschaft.png" alt="Europameister 2028" class="em-pokal">
+          <canvas id="confetti-canvas"></canvas>
+          <div class="wm-caption">
+            <h2>Europameister 2028 mit England <img src="img/flaggs/england.png" alt="England" class="flag" width="35px"></h2>
+            <p>„Ein Triumph der Herzen, ein Sieg für die Ewigkeit.“</p>
           </div>
         </div>
       </section>
@@ -317,8 +365,8 @@
                     <img src="img/flaggs/elfenbeinküste.png" class="flag-elfenbein" alt="elfenbeinküste">
                 </div>
               </div>
-            </div>
           </div>
+        </div>
     </section>
 
     <script src="js/interaktion.js"></script>

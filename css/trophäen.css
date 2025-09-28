@@ -1,0 +1,217 @@
+:root {
+  /* Hauptfarben */
+  --gold: #FFD700;
+  --gold-dunkel: #B8860B;
+  --silber: #C0C0C0;
+  --bronze: #CD7F32;
+
+  /* Hintergrund & Kontrast */
+  --trophäen-hintergrund: #fffaf0;
+  --trophäen-akzent: #fceabb;
+  --trophäen-text: #4a1c1c;
+
+  /* Schatten & Tiefe */
+  --trophäen-schatten: rgba(0, 0, 0, 0.2);
+  --trophäen-glanz: rgba(255, 255, 255, 0.3);
+
+  /* Hover & Interaktion */
+  --hover-gold: #ffec8b;
+  --hover-silber: #e0e0e0;
+  --hover-bronze: #e6a96b;
+}
+
+body.trophäen {
+  background: linear-gradient(to bottom, var(--gold), var(--trophäen-hintergrund));
+  color: var(--trophäen-text);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.trophäen-header {
+  background: linear-gradient(to right, var(--hover-silber), var(--bronze), var(--gold));
+  padding: 10px 0;
+  text-align: center;
+}
+
+.trophäen-logo {
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 5px solid var(--trophäen-text);
+}
+
+.trophäen-nav {
+  background-image: url('../img/-'); /* dein Musterbild */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.trophäen-nav ul {
+  color: var(--trophäen-text);
+  text-shadow: var(--gold) 0 0 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.trophäen-nav img {
+  width: 32px;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 4px;
+  margin-right: 6px;
+  border-color: var(--trophäen-text);
+}
+
+.trophäen-nav a {
+  color: var(--trophäen-hintergrund);
+  text-shadow: var(--gold) 0 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.elfenbeinküste-nav a:hover {
+  color: var(--hover-bronze);
+}
+
+.trophäen-page {
+  background: var(--trophäen-hintergrund);
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--trophäen-text);
+}
+
+.trophäen-page .intro {
+  font-style: italic;
+  color: var(--zitat-text);
+  margin-bottom: 40px;
+}
+
+.trophäen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.trophäen-card {
+  background: linear-gradient(to bottom, #fff, var(--trophäen-text));
+  border: 2px solid var(--rot);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(179, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.trophäen-card:hover {
+  transform: scale(1.05);
+}
+
+.trophäen-card img {
+  width: 80px;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   Dropdown-Menü
+================================== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--trophäen-akzent); /* oder deine Wunschfarbe */
+  border-radius: 4px;
+  padding: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: 1px solid var(--trophäen-hintergrund);
+  min-width: 220px;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown-menu a {
+  color: var(--cote-white);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--hover-bronze);
+  color: var(--trophäen-hintergrund);
+}
+
+.trophäen-nav li a.active {
+  border: 2px solid #00BFFF;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+}
+
+/* ===============================
+   Scroll-to-Top Button
+================================== */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--bronze);
+  color: var(--asec-black);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--hover-bronze);
+  transform: scale(1.1);
+}
+
+/* ===============================
+   Scroll-to-Top Button
+================================== */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--hover-bronze);
+  color: var(--trophäen-text);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--hover-bronze);
+  transform: scale(1.1);
+}
